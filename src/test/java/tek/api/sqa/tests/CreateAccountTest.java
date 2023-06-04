@@ -15,6 +15,7 @@ import tek.api.utility.EndPoints;
 public class CreateAccountTest extends APITestConfig{
 	private DataGenerator data = new DataGenerator(); 
 	@Test
+
 	public void createAccountValidTest() {
 		String validToken = getValidToken(); 
 		RequestSpecification request = RestAssured.given(); 
@@ -42,6 +43,7 @@ public class CreateAccountTest extends APITestConfig{
 		PrimaryAccount responseBody = response.as(PrimaryAccount.class);
 		//String actualEmail = response.jsonPath().getString("email");
 		Assert.assertEquals(responseBody.getEmail(), requestBody.getEmail());
+		//vsf
 	}
 
 }
